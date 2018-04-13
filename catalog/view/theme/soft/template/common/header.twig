@@ -39,115 +39,115 @@
 {% endfor %}
 </head>
 <body>
+    {# header #}
+    <header class="header">
 
+        <div class="container">
+            <div class="row">
 
-{# header #}
-<header class="header">
-
-    <div class="container">
-        <div class="row">
-
-            <nav class="nav" id="top">
-                
-                    <div class="nav__menu_left pull-left" id="top-links">
-
-                        <ul class="menu list-inline">
-                            <li class="menu__item">
-                                <a class="menu__link" href="{{ contact }}"></a> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span></li>
-                            <li class="menu__item dropdown">
-                                <a class="menu__link dropdown-toggle" href="{{ account }}" title="{{ text_account }}" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        {% if logged %}
-                                        <li class="dropdown-menu__item">
-                                            <a class="dropdown-menu__link" href="{{ account }}">{{ text_account }}</a>
-                                        </li>
-                                        <li class="dropdown-menu__item">
-                                            <a class="dropdown-menu__link" href="{{ order }}">{{ text_order }}</a>
-                                        </li>
-                                        <li class="dropdown-menu__item">
-                                            <a class="dropdown-menu__link" href="{{ download }}">{{ text_download }}</a>
-                                        </li>
-                                        <li class="dropdown-menu__item">
-                                            <a class="dropdown-menu__link" href="{{ transaction }}">{{ text_transaction }}</a>
-                                        </li>
-                                        <li class="dropdown-menu__item">
-                                            <a class="dropdown-menu__link" href="{{ logout }}">{{ text_logout }}</a>
-                                        </li>
-                                        {% else %}
-                                        <li class="dropdown-menu__item">
-                                            <a class="dropdown-menu__link" href="{{ register }}">{{ text_register }}</a>
-                                        </li>
-                                        <li class="dropdown-menu__item">
-                                            <a class="dropdown-menu__link" href="{{ login }}">{{ text_login }}</a>
-                                        </li>
-                                        {% endif %}
-                                    </ul>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</span></a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_shopping_cart }}</span></a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="{{ checkout }}" title="{{ text_checkout }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_checkout }}</span></a>
-                            </li>
-                        </ul>
-
-                    </div>
-                
-                    <div class="nav__menu_right pull-right">   
+                <nav class="header__nav" id="top">
                     
-                        <ul class="menu list-inline">
-                            <li class="menu__item"> {{ currency }} </li>
-                            <li class="menu__item"> {{ language }} </li>
-                        </ul>
+                        <div class="nav nav_left pull-left" id="top-links">
+
+                            <ul class="nav__menu list-inline">
+                                <li class="nav__item dropdown">
+                                    <a class="nav__link dropdown-toggle" href="{{ account }}" title="{{ text_account }}" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            {% if logged %}
+                                            <li class="dropdown-menu__item">
+                                                <a class="dropdown-menu__link" href="{{ account }}">{{ text_account }}</a>
+                                            </li>
+                                            <li class="dropdown-menu__item">
+                                                <a class="dropdown-menu__link" href="{{ order }}">{{ text_order }}</a>
+                                            </li>
+                                            <li class="dropdown-menu__item">
+                                                <a class="dropdown-menu__link" href="{{ download }}">{{ text_download }}</a>
+                                            </li>
+                                            <li class="dropdown-menu__item">
+                                                <a class="dropdown-menu__link" href="{{ transaction }}">{{ text_transaction }}</a>
+                                            </li>
+                                            <li class="dropdown-menu__item">
+                                                <a class="dropdown-menu__link" href="{{ logout }}">{{ text_logout }}</a>
+                                            </li>
+                                            {% else %}
+                                            <li class="dropdown-menu__item">
+                                                <a class="dropdown-menu__link" href="{{ register }}">{{ text_register }}</a>
+                                            </li>
+                                            <li class="dropdown-menu__item">
+                                                <a class="dropdown-menu__link" href="{{ login }}">{{ text_login }}</a>
+                                            </li>
+                                            {% endif %}
+                                        </ul>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</span></a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_shopping_cart }}</span></a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="{{ checkout }}" title="{{ text_checkout }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_checkout }}</span></a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="{{ contact }}"></a> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span>
+                                </li>
+                            </ul>
+
+                        </div>
                     
-                    </div>
+                        <div class="nav nav_right pull-right">   
+                        
+                            <ul class="nav__menu list-inline">
+                                <li class="nav__item"> {{ currency }} </li>
+                                <li class="nav__item"> {{ language }} </li>
+                            </ul>
+                        
+                        </div>
 
-            </nav>
+                </nav>
 
+            </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="row">
-        
+        <div class="container">
+            <div class="row">
+            
+                <div class="header__title">
+                    {# search #}
+                    <div class="col-sm-3">
 
-                {# search #}
-                <div class="col-sm-3">
-
-                    <div class="search">{{ search }}</div>
-                    
-                </div>
-
-                    {# logo #}
-                <div class="col-sm-6">
-
-                    <div class="logo" id="logo">
-                        {% if logo %}
-                        <a class="logo__link" href="{{ home }}">
-                            <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive logo__img" />
-                        </a>
-                        {% else %}
-                        <h1 class="logo__title">
-                            <a class="logo__link" href="{{ home }}">{{ name }}</a>
-                        </h1>
-                        {% endif %}
+                        <div class="search">{{ search }}</div>
+                        
                     </div>
 
-                </div>
+                        {# logo #}
+                    <div class="col-sm-6">
 
-                    {# cart #}
-                <div class="col-sm-3">
-                
-                    <div class="cart">{{ cart }}</div>
+                        <div class="logo" id="logo">
+                            {% if logo %}
+                            <a class="logo__link" href="{{ home }}">
+                                <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive logo__img" />
+                            </a>
+                            {% else %}
+                            <h1 class="logo__title">
+                                <a class="logo__link" href="{{ home }}">{{ name }}</a>
+                            </h1>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+                        {# cart #}
+                    <div class="col-sm-3">
                     
+                        <div class="cart">{{ cart }}</div>
+                        
+                    </div>
                 </div>
-        
+            
+            </div>
         </div>
-    </div>
 
-</header>
+    </header>
 
-{{ menu }}
+    {{ menu }}
