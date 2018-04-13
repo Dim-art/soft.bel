@@ -45,9 +45,11 @@
         <div class="container">
             <div class="row">
 
-                <nav class="header__nav" id="top">
+                <div class="header__nav" id="top">
+
+                    <div class="col-sm-6">
                     
-                        <div class="nav nav_left pull-left" id="top-links">
+                        <nav class="nav nav_left pull-left" id="top-links">
 
                             <ul class="nav__menu list-inline">
                                 <li class="nav__item dropdown">
@@ -93,34 +95,37 @@
                                 </li>
                             </ul>
 
-                        </div>
+                        </nav>
                     
-                        <div class="nav nav_right pull-right">   
+                    </div>
+                    <div class="col-sm-6">
+
+                        <nav class="nav nav_right pull-right">   
                         
                             <ul class="nav__menu list-inline">
                                 <li class="nav__item"> {{ currency }} </li>
                                 <li class="nav__item"> {{ language }} </li>
                             </ul>
                         
-                        </div>
+                        </nav>
 
-                </nav>
+                    </div>
 
+                </div>
             </div>
-        </div>
 
-        <div class="container">
-            <div class="row">
+            <div class="row">       
             
                 <div class="header__title">
+
                     {# search #}
                     <div class="col-sm-3">
-
-                        <div class="search">{{ search }}</div>
+                    
+                        <div class="search"> {{ search }} </div>
                         
                     </div>
 
-                        {# logo #}
+                    {# logo #}
                     <div class="col-sm-6">
 
                         <div class="logo" id="logo">
@@ -137,17 +142,28 @@
 
                     </div>
 
-                        {# cart #}
+                    {# cart #}
                     <div class="col-sm-3">
                     
                         <div class="cart">{{ cart }}</div>
                         
                     </div>
+
                 </div>
-            
+            </div>
+
+            <div class="row">
+                
+                {# header__navbar #}
+                <div class="header__navbar">
+                
+                    <nav class="navbar"> {{ menu }} </nav>
+                
+                </div>
+        
             </div>
         </div>
 
     </header>
 
-    {{ menu }}
+    
