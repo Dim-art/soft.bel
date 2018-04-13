@@ -46,7 +46,8 @@
             <div class="row">
 
                 <div class="header__nav" id="top">
-
+                    
+                    {# nav-left #}
                     <div class="col-sm-6">
                     
                         <nav class="nav nav_left pull-left" id="top-links">
@@ -98,8 +99,10 @@
                         </nav>
                     
                     </div>
+                    
+                    {# nav-right #}
                     <div class="col-sm-6">
-
+                    
                         <nav class="nav nav_right pull-right">   
                         
                             <ul class="nav__menu list-inline">
@@ -119,19 +122,19 @@
                 <div class="header__title">
 
                     {# search #}
-                    <div class="col-sm-3">
+                    <div class="col-xs-3">
                     
                         <div class="search"> {{ search }} </div>
                         
                     </div>
 
                     {# logo #}
-                    <div class="col-sm-6">
+                    <div class="col-xs-6">
 
                         <div class="logo" id="logo">
                             {% if logo %}
-                            <a class="logo__link" href="{{ home }}">
-                                <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive logo__img" />
+                            <a class="logo__link" href=" {{ home }} ">
+                                <img class="logo__img img-responsive" src=" {{ logo }} " title=" {{ name }} " alt=" {{ name }} " />
                             </a>
                             {% else %}
                             <h1 class="logo__title">
@@ -143,9 +146,9 @@
                     </div>
 
                     {# cart #}
-                    <div class="col-sm-3">
+                    <div class="col-xs-3">
                     
-                        <div class="cart">{{ cart }}</div>
+                        <div class="cart"> {{ cart }} </div>
                         
                     </div>
 
@@ -154,11 +157,15 @@
 
             <div class="row">
                 
-                {# header__navbar #}
                 <div class="header__navbar">
-                
-                    <nav class="navbar"> {{ menu }} </nav>
-                
+
+                    {# navbar #}
+                    <div class="col-sm-12">
+
+                        <nav class="navbar"> {{ menu }} </nav> 
+
+                    </div>
+                    
                 </div>
         
             </div>
