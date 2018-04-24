@@ -47,13 +47,13 @@
                 <div class="header__nav" id="top">
                     
                     {# nav-left #}
-                    <div class="col-sm-6">
+                    <div class="col-sm-10">
                     
                         <nav class="nav nav_left pull-left" id="top-links">
 
-                            <ul class="nav__menu list-inline">
-                                <li class="nav__item dropdown">
-                                    <a class="nav__link dropdown-toggle" href="{{ account }}" title="{{ text_account }}" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
+                            <ul class="menu list-inline">
+                                <li class="menu__item dropdown">
+                                    <a class="menu__link dropdown-toggle" href="{{ account }}" title="{{ text_account }}" data-toggle="dropdown"><span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
                                         <ul class="dropdown-menu dropdown-menu-right">
                                             {% if logged %}
                                             <li class="dropdown-menu__item">
@@ -81,17 +81,17 @@
                                             {% endif %}
                                         </ul>
                                 </li>
-                                <li class="nav__item">
-                                    <a class="nav__link" href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</span></a>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</span></a>
                                 </li>
-                                <li class="nav__item">
-                                    <a class="nav__link" href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_shopping_cart }}</span></a>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_shopping_cart }}</span></a>
                                 </li>
-                                <li class="nav__item">
-                                    <a class="nav__link" href="{{ checkout }}" title="{{ text_checkout }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_checkout }}</span></a>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ checkout }}" title="{{ text_checkout }}"><span class="hidden-xs hidden-sm hidden-md">{{ text_checkout }}</span></a>
                                 </li>
-                                <li class="nav__item">
-                                    <a class="nav__link" href="{{ contact }}"></a> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ contact }}"></a> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span>
                                 </li>
                             </ul>
 
@@ -100,13 +100,13 @@
                     </div>
                     
                     {# nav-right #}
-                    <div class="col-sm-6">
+                    <div class="col-sm-2">
                     
                         <nav class="nav nav_right pull-right">   
                         
-                            <ul class="nav__menu list-inline">
-                                <li class="nav__item"> {{ currency }} </li>
-                                <li class="nav__item"> {{ language }} </li>
+                            <ul class="menu list-inline">
+                                <li class="menu__item"> {{ currency }} </li>
+                                <li class="menu__item"> {{ language }} </li>
                             </ul>
                         
                         </nav>
