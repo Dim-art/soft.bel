@@ -9,21 +9,39 @@ body
     overflow-x: hidden
     font-family: MyriadSetProText, sans-serif
 
-a
-    color: $link
-    &:focus, &:hover, &:active
-        text-decoration: none
-        color: #000000
-        border: none
+// a
+//     color: $link
+//     &:focus, &:hover, &:active
+//         text-decoration: none
+//         color: $accent
+//         border: none
 
-button > span
-    color: $link
-    &:hover
-        text-decoration: none
-        
 i 
     color: $accent
+    &:hover
+        color: $link
 
+// reset Bootstrap style
+.btn-default, 
+.btn,
+.nav>li>a,
+.open > a,
+.nav>.open>a,
+a
+    color: $link
+    background-color: transparent
+    box-shadow: none
+    outline: none
+    text-decoration: none
+    &:active, &:hover, &:active, &:focus
+        color: $accent
+        background-color: transparent
+        box-shadow: none
+        outline: none
+        text-decoration: none
+
+
+// Header
 .nav
     margin-top: 40px
     margin-bottom: 20px    
@@ -41,18 +59,26 @@ i
         border: 0            
             radius: 0
         font-size: 13px
+        font-style: italic
         box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 35px 0px
         
 
     .input-group-btn
+        &:focus
+            outline: none
         .btn
             border: 0
+            height: 50px
+            &:hover, &:focus
+                background-color: transparent  
+                outline: none             
 
 .logo
     margin: auto
     &__img
         margin: auto
-        
+
+       
         
 
 @import "media"
