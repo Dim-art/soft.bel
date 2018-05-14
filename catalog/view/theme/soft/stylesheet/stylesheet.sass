@@ -1,6 +1,9 @@
 @import "vars"
 @import "fonts"
 
+*
+    box-sizing: border-box
+    
 body 
     font-size: 16px
     min-width: 320px
@@ -46,17 +49,34 @@ a
 
 #search
     position: relative
+    width: 300px
+    margin: 0 auto
+    height: 50px
+    
     .form-control
+        display: none
         height: 50px
-        padding: 10px 16px
+        width: 0
+        // padding: 0 42px 0 15px
         border: 0            
-            radius: 0
+            outline: none
         font-size: 13px
         font-style: italic
-        box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 35px 0px
         
+        transition: .4s cubic-bezier(0, 0.8, 0, 1)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        &:focus
+            z-index: 1
+            width: 300px
 
     .input-group-btn
+        position: absolute
+        top: 0
+        left: 0
+        cursor: pointer
         &:focus
             outline: none
         .btn
@@ -64,16 +84,24 @@ a
             height: 50px
             &:hover, &:focus
                 background-color: transparent  
-                outline: none 
+                outline: none
+        &:before
+            content: "\f002"
+
+.cart
+    float: right
+    #cart-total
+        display: none
 
 .fa-search,
 .fa-shopping-cart
-    font-size: 29px         
+    font-size: 29px
+    
 
 .logo
-    margin: auto
+    margin: 0 auto
     &__img
-        margin: auto
+        margin: 0 auto
 
        
         
